@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Testing</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+	<script src="galleria/galleria-1.4.2.min.js"></script>
+	<style>
+    	.galleria {
+    		width: 700px;
+    		height: 500px;
+    		background: #000;
+    		margin: 50px auto;
+    	}
+    	.page-cover {
+    		display: none;
+    		background: rgba(0,0,0,0.7);
+    		position: fixed;
+    		content: "";
+    		top: 0;
+    		left: 0;
+    		width: 100%;
+    		height: 100%;
+    		margin: 0;
+    		padding: 0;
+    		-webkit-box-sizing: border-box;
+    		   -moz-box-sizing: border-box;
+    		        box-sizing: border-box;
+    	}
+    	#close-btn {
+    		float: right;
+    	}
+    	#close-btn:after {
+    		display: block;
+    		content: "";
+    		clear: both;
+    	}
+	</style>
+</head>
+<body>	
+	<script type="text/plain" id="preCode">
+		<div class="galleria">
+			<img src="photo1.jpg" alt="">
+			<img src="photo2.jpg" alt="">
+			<img src="photo3.jpg" alt="">
+		</div>
+	</script>
+	<!-- Make samples here - START-->
+	
+
+
+	<!-- Make samples here - END -->
+	<div class="page-cover">	
+		<input type="button" value="CLOSE" id="close-btn">
+		<!-- Galleria will go inside here -->
+	</div>
+	<input id="clickMe" type="button" value="Click Me!" />
+	<script>
+		$('#clickMe').click(function(){
+			var gallery = $('.galleria');
+			$('.page-cover').css('display','block');
+			if ($('.galleria').length == 0) {
+				console.log('Gallery is null');
+				$('.page-cover').append($('#preCode').html());
+				gallery.ready(function(){
+					Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
+					Galleria.run('.galleria');
+				}); 
+			}
+		});
+		$('#close-btn').click(function(){
+			$('.page-cover').css('display','none');
+		});
+	</script>
+</body>
+</html>

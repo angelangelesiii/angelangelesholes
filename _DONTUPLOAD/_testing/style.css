@@ -1,0 +1,43 @@
+/*PARALLAX EFFECT Testing 4/3/2015*/
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+         -o-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  
+  -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+         -o-box-sizing: border-box;
+            box-sizing: border-box;
+
+}
+
+#parwall_1 {
+  height: 1000px;
+  background: url(../img/banner.jpg) fixed repeat center top;
+
+}
+
+.article1 {
+  background: #F3F3F3;
+  font-family: sans-serif;
+  color: #7E0000;
+  -webkit-box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);
+  box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);
+  text-align: center;
+}

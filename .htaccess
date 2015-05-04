@@ -1,0 +1,13 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^angelangeles\.esy.es
+RewriteRule (.*) http://www.angelangeles.esy.es/$1 [R=301,L]
+
+<Files index.php>
+    Order Allow,Deny
+    Allow from all
+</Files>
+
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>
